@@ -25,5 +25,5 @@ https://docs.google.com/document/d/1n1FZW_l1u0vHluybxGBH4yZCx5MUVDjdRnqRzpUJ0mA/
 
 
 ## License
-***
+
 MIT
