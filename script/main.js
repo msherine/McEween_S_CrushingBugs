@@ -46,7 +46,12 @@
 		console.log(`dropped this element:`, currentEl);
 		// appendChild (add child) is a built-in Js method that
 		//adds element to a containing(parent) element
-		this.appendChild(document.querySelector(`#${currentEl}`));
+		if (this.childElementCount == 1)
+		{
+			return;
+		}
+		event.target.appendChild(document.querySelector(`#${currentEl}`));
+
 	}
 
 	// add event handling here -. loop through theThumbnails array and add event handling to each image
