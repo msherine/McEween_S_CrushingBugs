@@ -1,5 +1,6 @@
 # The Crushing Bugs Assignment
 
+An Interactive Drag and Drop Puzzle with some bugs which need to be solved! 
 
 Planning Doc:
 https://docs.google.com/document/d/1n1FZW_l1u0vHluybxGBH4yZCx5MUVDjdRnqRzpUJ0mA/edit?usp=sharing
