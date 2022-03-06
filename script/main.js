@@ -5,6 +5,7 @@
 		dropZones = document.querySelectorAll(".drop-zone"),
 		gameBoard = document.querySelector(".puzzle-board");
 
+		const puzzlePaths = ["topLeft", "topRight", "bottomLeft", "bottomRight"]
 	/* theThumbnails collects all of the image elements into an array-	like container that looks like this:
 	[
 		<img src="images/buttonZero.jpg" alt="thumbnail">
@@ -14,10 +15,15 @@
 	]
 	*/
 
-	function changeBGImg() {
+	function changeImgSet() {
 		// the 'this' keyword refers to the element that triggers this function
 		//debugger;
-		gameBoard.style.backgroundImage = `url(images/backGround${this.dataset.bgref}.jpg)`
+		gameBoard.style.backgroundImage = `url(images/backGround${this.dataset.bgref}.jpg)`;
+
+		puzzlePaths.forEach((img, index) => {
+			puzzlePieces[index].src = `images/${img}${this.dataset.bgref}.jpg`;
+
+		});
 	}
 
 	function startDrag(event) {
@@ -44,7 +50,7 @@
 	}
 
 	// add event handling here -. loop through theThumbnails array and add event handling to each image
-	theThumbnails.forEach(thumb => thumb.addEventListener("click", changeBGImg));
+	theThumbnails.forEach(thumb => thumb.addEventListener("click", changeImgSet));
 
 	puzzlePieces.forEach(piece => piece.addEventListener("dragstart", startDrag));
 
